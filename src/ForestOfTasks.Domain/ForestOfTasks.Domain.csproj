@@ -8,4 +8,8 @@
       <InternalsVisibleTo Include="ForestOfTasks.Domain.Tests.Unit" />
     </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0" />
+  </ItemGroup>
+
 </Project>
