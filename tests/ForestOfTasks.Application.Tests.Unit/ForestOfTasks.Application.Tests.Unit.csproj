@@ -18,4 +18,8 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\ForestOfTasks.Application\ForestOfTasks.Application.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -1,4 +1,13 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using ForestOfTasks.Application.DependencyInjection;
+using ForestOfTasks.Domain.DependencyInjection;
+using ForestOfTasks.Infrastructure.DependencyInjection;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services
+  .AddApplication()
+  .AddDomain()
+  .AddInfrastructure();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
