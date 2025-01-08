@@ -1,0 +1,31 @@
+name: Verify PR
+
+env:
+  DOTNET_VERSION: '9.0.x'
+  
+on:
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+    name: Verify PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
+
+      - name: Run Tests
+        run: dotnet test --configuration Release
+
+      - name: Check dotnet format
+        run: dotnet format -v detailed --verify-no-changes
