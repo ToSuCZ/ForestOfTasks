@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ForestOfTasks.Api.Tests.Unit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd8519b6cb0e36422fd4c52caedc5e4f9328387a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a346c32bd7ca3b65af15fdecf610c65b9184ef06")]
 [assembly: System.Reflection.AssemblyProductAttribute("ForestOfTasks.Api.Tests.Unit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ForestOfTasks.Api.Tests.Unit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

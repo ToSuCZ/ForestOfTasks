@@ -1,10 +1,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
-using ForestOfTasks.SharedKernel;
-using Microsoft.AspNetCore.Identity;
 
-namespace ForestOfTasks.Domain.Aggregates.User;
+namespace ForestOfTasks.SharedKernel;
 
-public class User : IdentityUser, IDomainEventHolder, IAggregateRoot
+public abstract class DomainEventHolder : IDomainEventHolder
 {
   private readonly List<DomainEventBase> _domainEvents = [];
   

@@ -1,50 +1,42 @@
 ﻿using ForestOfTasks.Application.DependencyInjection;
 using ForestOfTasks.Domain.DependencyInjection;
 using ForestOfTasks.Infrastructure.DependencyInjection;
+using ForestOfTasks.SharedKernel.Consts;
+using Serilog;
+
+var logger = Log.Logger = new LoggerConfiguration()
+  .Enrich.FromLogContext()
+  .WriteTo.Console()
+  .CreateLogger();
+
+logger.Information("[Init] Starting web host");
 
 var builder = WebApplication.CreateBuilder(args);
+{
+  builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
 
-builder.Services
-  .AddApplication()
-  .AddDomain()
-  .AddInfrastructure();
-
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+  builder.Services.AddAuthentication();
+  builder.Services.AddAuthorization();
+  builder.Services.AddOpenApi();
+  logger.Information("[Init] {layer} layer services registered", Structure.Api);
+  
+  builder.Services
+    .AddApplication(builder.Configuration, logger)
+    .AddDomain(builder.Configuration, logger)
+    .AddInfrastructure(builder.Configuration, logger);
+}
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
 {
-  app.MapOpenApi();
+  if (app.Environment.IsDevelopment())
+  {
+    app.MapOpenApi();
+  }
+
+  app.UseAuthentication()
+    .UseAuthorization();
 }
 
-app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-  "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-  var forecast = Enumerable.Range(1, 5).Select(index =>
-    new WeatherForecast
-    (
-      DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-      Random.Shared.Next(-20, 55),
-      summaries[Random.Shared.Next(summaries.Length)]
-    ))
-    .ToArray();
-  return forecast;
-})
-.WithName("GetWeatherForecast");
-
+logger.Information("[Init] Application starting");
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-  public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
