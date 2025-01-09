@@ -1,7 +1,9 @@
 using ForestOfTasks.Domain.Aggregates.User;
+using ForestOfTasks.Infrastructure.Consts;
 using ForestOfTasks.Infrastructure.Data;
 using ForestOfTasks.SharedKernel;
 using ForestOfTasks.SharedKernel.Consts;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,12 +18,24 @@ public static class ServiceCollectionExtensions
     ConfigurationManager configuration,
     ILogger logger)
   {
-    string? connectionString = configuration.GetConnectionString("Users");
+    string? connectionString = configuration.GetConnectionString(ConnectionStrings.ApplicationDatabase);
     services.AddDbContext<ForestOfTasksDbContext>(
       options => options.UseSqlServer(connectionString));
-
+    
     services.AddIdentityCore<User>()
       .AddEntityFrameworkStores<ForestOfTasksDbContext>();
+
+    services.Configure<IdentityOptions>(options =>
+    {
+      options.Password.RequireDigit = true;
+      options.Password.RequireLowercase = true;
+      options.Password.RequireNonAlphanumeric = true;
+      options.Password.RequireUppercase = true;
+      options.Password.RequiredLength = 8;
+      
+      options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+      options.User.RequireUniqueEmail = true;
+    });
     
     services.AddScoped<IDomainEventDispatcher, DomainEventDispatcher>();
 

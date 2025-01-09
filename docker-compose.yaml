@@ -1,0 +1,40 @@
+services:
+  forest_of_tasks.api:
+    build:
+      context: .
+      dockerfile: src/ForestOfTasks.Api/Dockerfile
+    container_name: ForestOfTasks.Api
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://+:5000;https://+:5001"
+    networks:
+      - ForestOfTasks.Network
+    depends_on:
+      - forest_of_tasks.application_db
+
+  forest_of_tasks.application_db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ForestOfTasks.ApplicationDb
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "MySaPassword123"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    networks:
+      - ForestOfTasks.Network
+    restart: on-failure
+    
+networks:
+  ForestOfTasks.Network:
+    name: ForestOfTasks.Network
+    driver: bridge
+    
+volumes:
+  mssql_data:
+    name: ForestOfTasks.MsSqlData
+    driver: local
