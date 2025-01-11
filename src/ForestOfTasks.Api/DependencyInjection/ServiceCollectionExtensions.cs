@@ -8,7 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace ForestOfTasks.Api.DependencyInjection;
 
-public static class ServiceCollectionExtensions
+internal static class ServiceCollectionExtensions
 {
   public static IServiceCollection BindApiConfiguration(
     this IServiceCollection services,

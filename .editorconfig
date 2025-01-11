@@ -97,6 +97,9 @@ csharp_style_conditional_delegate_call = true:suggestion
 # Modifier preferences
 csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:suggestion
 #### Naming styles ####
+dotnet_diagnostic.CA1040.severity = none
+dotnet_diagnostic.CA1062.severity = none
+dotnet_diagnostic.CA2007.severity = none
 
 # Naming rules
 
@@ -160,3 +163,7 @@ csharp_preserve_single_line_blocks = true
 [*.vb]
 # Modifier preferences
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
+
+[src/ForestOfTasks.Infrastructure/Data/Migrations/*.cs]
+dotnet_diagnostic.severity = none
+dotnet_analyzer_diagnostic.severity = none

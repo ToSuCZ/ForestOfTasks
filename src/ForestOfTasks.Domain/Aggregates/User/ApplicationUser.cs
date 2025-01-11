@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ForestOfTasks.Domain.Aggregates.User;
 
-public class User : IdentityUser, IDomainEventHolder, IAggregateRoot
+public class ApplicationUser : IdentityUser, IDomainEventHolder, IAggregateRoot
 {
   private readonly List<DomainEventBase> _domainEvents = [];
   

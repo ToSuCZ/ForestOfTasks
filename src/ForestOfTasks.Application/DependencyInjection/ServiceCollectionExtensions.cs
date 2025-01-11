@@ -15,7 +15,7 @@ public static class ServiceCollectionExtensions
     services.AddMediatR(options => 
       options.RegisterServicesFromAssembly(typeof(ServiceCollectionExtensions).Assembly));
     
-    logger.Information("[Init] {layer} layer services registered", Structure.Application);
+    logger.Information("[Init] {Layer} layer services registered", LayerStructure.Application);
     
     return services;
   }

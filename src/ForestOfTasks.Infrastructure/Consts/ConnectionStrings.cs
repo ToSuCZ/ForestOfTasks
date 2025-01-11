@@ -1,6 +1,6 @@
 namespace ForestOfTasks.Infrastructure.Consts;
 
-public class ConnectionStrings
+internal static class ConnectionStrings
 {
-  public static string ApplicationDatabase = "ApplicationDatabase";
+  public const string ApplicationDatabase = "ApplicationDatabase";
 }

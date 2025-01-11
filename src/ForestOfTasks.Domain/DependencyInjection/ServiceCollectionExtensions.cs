@@ -12,7 +12,7 @@ public static class ServiceCollectionExtensions
     ConfigurationManager configuration,
     ILogger logger)
   {
-    logger.Information("[Init] {layer} layer services registered", Structure.Domain);
+    logger.Information("[Init] {Layer} layer services registered", LayerStructure.Domain);
     
     return services;
   }

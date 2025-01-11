@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cZQ7iENKSMQ=",
+  "dgSpecHash": "Zt/ZyIyYiVg=",
   "success": true,
   "projectFilePath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Api/ForestOfTasks.Api.csproj",
   "expectedPackageFiles": [
+    "/home/tvacula/.nuget/packages/ardalis.guardclauses/5.0.0/ardalis.guardclauses.5.0.0.nupkg.sha512",
     "/home/tvacula/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/home/tvacula/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
     "/home/tvacula/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
@@ -71,6 +72,7 @@
     "/home/tvacula/.nuget/packages/serilog.sinks.console/6.0.0/serilog.sinks.console.6.0.0.nupkg.sha512",
     "/home/tvacula/.nuget/packages/serilog.sinks.debug/3.0.0/serilog.sinks.debug.3.0.0.nupkg.sha512",
     "/home/tvacula/.nuget/packages/serilog.sinks.file/6.0.0/serilog.sinks.file.6.0.0.nupkg.sha512",
+    "/home/tvacula/.nuget/packages/sonaranalyzer.csharp/10.5.0.109200/sonaranalyzer.csharp.10.5.0.109200.nupkg.sha512",
     "/home/tvacula/.nuget/packages/system.clientmodel/1.0.0/system.clientmodel.1.0.0.nupkg.sha512",
     "/home/tvacula/.nuget/packages/system.codedom/6.0.0/system.codedom.6.0.0.nupkg.sha512",
     "/home/tvacula/.nuget/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",

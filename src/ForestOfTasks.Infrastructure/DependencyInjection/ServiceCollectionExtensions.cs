@@ -22,7 +22,7 @@ public static class ServiceCollectionExtensions
     services.AddDbContext<ForestOfTasksDbContext>(
       options => options.UseSqlServer(connectionString));
     
-    services.AddIdentityCore<User>()
+    services.AddIdentityCore<ApplicationUser>()
       .AddEntityFrameworkStores<ForestOfTasksDbContext>();
 
     services.Configure<IdentityOptions>(options =>
@@ -39,7 +39,7 @@ public static class ServiceCollectionExtensions
     
     services.AddScoped<IDomainEventDispatcher, DomainEventDispatcher>();
 
-    logger.Information("[Init] {layer} layer services registered", Structure.Infrastructure);
+    logger.Information("[Init] {Layer} layer services registered", LayerStructure.Infrastructure);
     
     return services;
   }

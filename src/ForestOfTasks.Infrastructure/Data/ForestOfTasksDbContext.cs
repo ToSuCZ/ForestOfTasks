@@ -10,7 +10,7 @@ public class ForestOfTasksDbContext(
   IDomainEventDispatcher? dispatcher
   ) : DbContext(options)
 {
-  public DbSet<User> Users { get; set; } = null!;
+  public DbSet<ApplicationUser> Users { get; set; } = null!;
   
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
@@ -25,9 +25,9 @@ public class ForestOfTasksDbContext(
     configurationBuilder.Properties<decimal>().HavePrecision(18,6);
   }
   
-  public override async Task<int> SaveChangesAsync(CancellationToken ct = default)
+  public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
   {
-    int result = await base.SaveChangesAsync(ct).ConfigureAwait(false);
+    int result = await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
     if (dispatcher is null)
     {
@@ -37,10 +37,10 @@ public class ForestOfTasksDbContext(
     var entities = ChangeTracker
       .Entries<IDomainEventHolder>()
       .Select(e => e.Entity)
-      .Where(e => e.DomainEvents.Any())
+      .Where(e => e.DomainEvents.Count > 0)
       .ToArray();
     
-    await dispatcher.DispatchAndClearAsync(entities, ct);
+    await dispatcher.DispatchAndClearAsync(entities, cancellationToken);
     
     return result;
   }
