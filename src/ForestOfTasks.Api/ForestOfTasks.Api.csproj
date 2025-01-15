@@ -5,6 +5,7 @@
   </ItemGroup>
   
   <ItemGroup>
+    <PackageReference Include="Ardalis.Result" />
     <PackageReference Include="FluentValidation.AspNetCore" />
     <PackageReference Include="MediatR" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
@@ -21,6 +22,10 @@
     <ProjectReference Include="..\ForestOfTasks.Application\ForestOfTasks.Application.csproj" />
     <ProjectReference Include="..\ForestOfTasks.Domain\ForestOfTasks.Domain.csproj" />
     <ProjectReference Include="..\ForestOfTasks.Infrastructure\ForestOfTasks.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contracts\" />
   </ItemGroup>
 
 </Project>

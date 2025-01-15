@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ForestOfTasks.Infrastructure.Data.Migrations
 {
-    [DbContext(typeof(ForestOfTasksDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250109134659_Initial")]
     partial class Initial
     {

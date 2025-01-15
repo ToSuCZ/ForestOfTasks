@@ -77,6 +77,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",

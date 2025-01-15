@@ -1,23 +1,23 @@
 using System.Reflection;
-using ForestOfTasks.Domain.Aggregates.User;
+using ForestOfTasks.Domain.Aggregates.UserAggregate;
 using ForestOfTasks.SharedKernel;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ForestOfTasks.Infrastructure.Data;
 
-public class ForestOfTasksDbContext(
+public class ApplicationDbContext(
   DbContextOptions options,
   IDomainEventDispatcher? dispatcher
-  ) : DbContext(options)
+  ) : IdentityDbContext<ApplicationUser>(options)
 {
-  public DbSet<ApplicationUser> Users { get; set; } = null!;
   
-  protected override void OnModelCreating(ModelBuilder modelBuilder)
+  protected override void OnModelCreating(ModelBuilder builder)
   {
-    modelBuilder.HasDefaultSchema("ForestOfTasks");
-    modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    builder.HasDefaultSchema("ForestOfTasks");
+    builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     
-    base.OnModelCreating(modelBuilder);
+    base.OnModelCreating(builder);
   }
   
   protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)

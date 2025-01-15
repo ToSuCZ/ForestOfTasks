@@ -1,4 +1,4 @@
-using ForestOfTasks.Domain.Aggregates.User;
+using ForestOfTasks.Domain.Aggregates.UserAggregate;
 using ForestOfTasks.Infrastructure.Consts;
 using ForestOfTasks.Infrastructure.Data;
 using ForestOfTasks.SharedKernel;
@@ -19,11 +19,11 @@ public static class ServiceCollectionExtensions
     ILogger logger)
   {
     string? connectionString = configuration.GetConnectionString(ConnectionStrings.ApplicationDatabase);
-    services.AddDbContext<ForestOfTasksDbContext>(
+    services.AddDbContext<ApplicationDbContext>(
       options => options.UseSqlServer(connectionString));
     
     services.AddIdentityCore<ApplicationUser>()
-      .AddEntityFrameworkStores<ForestOfTasksDbContext>();
+      .AddEntityFrameworkStores<ApplicationDbContext>();
 
     services.Configure<IdentityOptions>(options =>
     {

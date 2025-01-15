@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using ForestOfTasks.SharedKernel;
 using Microsoft.AspNetCore.Identity;
 
-namespace ForestOfTasks.Domain.Aggregates.User;
+namespace ForestOfTasks.Domain.Aggregates.UserAggregate;
 
 public class ApplicationUser : IdentityUser, IDomainEventHolder, IAggregateRoot
 {

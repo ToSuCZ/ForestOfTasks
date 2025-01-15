@@ -57,6 +57,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Ardalis.Result": {
+              "target": "Package",
+              "version": "[10.1.0, )",
+              "versionCentrallyManaged": true
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )",
@@ -104,6 +109,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
@@ -167,6 +173,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj"
+              },
               "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj": {
                 "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj"
               }
@@ -190,6 +199,16 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Ardalis.Result": {
+              "target": "Package",
+              "version": "[10.1.0, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )",
+              "versionCentrallyManaged": true
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )",
@@ -205,6 +224,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
@@ -311,6 +331,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
@@ -432,6 +453,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
@@ -539,6 +561,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",

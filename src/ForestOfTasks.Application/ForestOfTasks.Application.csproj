@@ -9,11 +9,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ForestOfTasks.Domain\ForestOfTasks.Domain.csproj" />
     <ProjectReference Include="..\ForestOfTasks.SharedKernel\ForestOfTasks.SharedKernel.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.Result" />
+    <PackageReference Include="FluentValidation.AspNetCore" />
     <PackageReference Include="Serilog.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>
