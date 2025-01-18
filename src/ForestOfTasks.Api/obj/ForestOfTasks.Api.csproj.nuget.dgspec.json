@@ -57,9 +57,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Ardalis.Result": {
+            "FluentResults": {
               "target": "Package",
-              "version": "[10.1.0, )",
+              "version": "[3.16.0, )",
               "versionCentrallyManaged": true
             },
             "FluentValidation.AspNetCore": {
@@ -109,17 +109,19 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
-            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
             "Microsoft.AspNetCore.OpenApi": "9.0.0",
             "Microsoft.EntityFrameworkCore": "9.0.0",
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "Serilog.AspNetCore": "9.0.0",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -199,14 +201,24 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Ardalis.Result": {
+            "FluentResults": {
               "target": "Package",
-              "version": "[10.1.0, )",
+              "version": "[3.16.0, )",
               "versionCentrallyManaged": true
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.3.1, )",
               "versionCentrallyManaged": true
             },
             "Serilog.AspNetCore": {
@@ -224,17 +236,19 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
-            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
             "Microsoft.AspNetCore.OpenApi": "9.0.0",
             "Microsoft.EntityFrameworkCore": "9.0.0",
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "Serilog.AspNetCore": "9.0.0",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -331,17 +345,19 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
-            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
             "Microsoft.AspNetCore.OpenApi": "9.0.0",
             "Microsoft.EntityFrameworkCore": "9.0.0",
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "Serilog.AspNetCore": "9.0.0",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -453,17 +469,19 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
-            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
             "Microsoft.AspNetCore.OpenApi": "9.0.0",
             "Microsoft.EntityFrameworkCore": "9.0.0",
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "Serilog.AspNetCore": "9.0.0",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -541,6 +559,16 @@
               "version": "[5.0.0, )",
               "versionCentrallyManaged": true
             },
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.16.0, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )",
+              "versionCentrallyManaged": true
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )",
@@ -561,17 +589,19 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
-            "Ardalis.Result": "10.1.0",
             "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
             "FluentValidation.AspNetCore": "11.3.0",
             "MediatR": "12.4.1",
             "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
             "Microsoft.AspNetCore.OpenApi": "9.0.0",
             "Microsoft.EntityFrameworkCore": "9.0.0",
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "Serilog.AspNetCore": "9.0.0",
             "SonarAnalyzer.CSharp": "10.5.0.109200",

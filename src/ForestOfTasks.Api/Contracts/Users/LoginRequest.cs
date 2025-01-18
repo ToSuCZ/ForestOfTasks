@@ -1,3 +1,3 @@
-namespace ForestOfTasks.Api.Endpoints.Users.Login;
+namespace ForestOfTasks.Api.Contracts.Users;
 
 internal record LoginRequest(string Email, string Password);

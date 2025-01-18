@@ -1,8 +1,8 @@
 using FluentValidation;
 
-namespace ForestOfTasks.Application.Users.Commands;
+namespace ForestOfTasks.Application.Users.Commands.CreateUser;
 
-public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
+internal sealed class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
 {
   public CreateUserCommandValidator()
   {

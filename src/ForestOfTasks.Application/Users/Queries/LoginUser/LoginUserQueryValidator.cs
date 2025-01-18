@@ -1,8 +1,8 @@
 using FluentValidation;
 
-namespace ForestOfTasks.Application.Users.Queries;
+namespace ForestOfTasks.Application.Users.Queries.LoginUser;
 
-public class LoginUserQueryValidator : AbstractValidator<LoginUserQuery>
+internal sealed class LoginUserQueryValidator : AbstractValidator<LoginUserQuery>
 {
   public LoginUserQueryValidator()
   {

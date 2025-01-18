@@ -5,7 +5,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Ardalis.Result" />
+    <PackageReference Include="FluentResults" />
     <PackageReference Include="FluentValidation.AspNetCore" />
     <PackageReference Include="MediatR" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\" />
+    <Folder Include="Configuration\" />
   </ItemGroup>
 
 </Project>

@@ -1,3 +1,3 @@
-namespace ForestOfTasks.Api.Endpoints.Users.Register;
+namespace ForestOfTasks.Api.Contracts.Users;
 
 internal record RegisterRequest(string Username, string Email, string Password);

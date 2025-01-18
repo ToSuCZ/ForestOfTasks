@@ -1,8 +1,9 @@
-namespace ForestOfTasks.Api.Configuration;
+namespace ForestOfTasks.Application.Configuration;
 
-internal class JwtSettings
+public class JwtSettings
 {
   public string JwtIssuer { get; set; } = string.Empty;
   public string JwtAudience { get; set; } = string.Empty;
   public string JwtSecret { get; set; } = string.Empty;
+  public int JwtDurationInMinutes { get; set; }
 }

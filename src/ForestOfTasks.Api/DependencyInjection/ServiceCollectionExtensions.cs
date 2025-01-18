@@ -1,7 +1,7 @@
 using System.Text;
 using System.Text.Json;
-using ForestOfTasks.Api.Configuration;
 using ForestOfTasks.SharedKernel.Consts;
+using ForestOfTasks.Application.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;

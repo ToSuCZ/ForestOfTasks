@@ -1,7 +1,6 @@
 ﻿using System.Globalization;
 using FluentValidation;
 using ForestOfTasks.Api.DependencyInjection;
-using ForestOfTasks.Api.Endpoints.Users;
 using ForestOfTasks.Application.DependencyInjection;
 using ForestOfTasks.Domain.DependencyInjection;
 using ForestOfTasks.Infrastructure.DependencyInjection;
@@ -21,6 +20,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddEnvironmentVariables();
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
+
+builder.Services.AddControllers();
 
 builder.Services.BindApiConfiguration(builder.Configuration);
 builder.Services.AddAuthorization();
@@ -47,7 +48,7 @@ if (app.Environment.IsDevelopment())
   app.MapOpenApi();
 }
 
-app.MapUserRoutes();
+app.MapControllers();
 
 app.UseExceptionHandler(error =>
 {

@@ -1,11 +1,11 @@
-using Ardalis.Result;
+using FluentResults;
 using ForestOfTasks.Domain.Aggregates.UserAggregate;
 using ForestOfTasks.SharedKernel;
 using Microsoft.AspNetCore.Identity;
 
-namespace ForestOfTasks.Application.Users.Commands;
+namespace ForestOfTasks.Application.Users.Commands.CreateUser;
 
-public class CreateUserCommandHandler(
+internal sealed class CreateUserCommandHandler(
   UserManager<ApplicationUser> userManager
 ) : ICommandHandler<CreateUserCommand, Result<ApplicationUser>>
 {
@@ -19,9 +19,12 @@ public class CreateUserCommandHandler(
     
     if (result.Succeeded)
     {
-      return Result<ApplicationUser>.Success(newUser);
+      return Result.Ok(newUser);
     }
-    
-    return Result.Error();
+
+    return Result
+        .Fail(new Error("Validation Failed"))
+        .WithReasons(result.Errors.Select(e => new Error(e.Description)));
+
   }
 }
