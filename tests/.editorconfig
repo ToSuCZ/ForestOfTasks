@@ -1,0 +1,50 @@
+# Root .editorconfig
+root = true
+
+# General Settings
+[*.{cs,vb}]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+charset = utf-8-bom
+end_of_line = crlf
+
+# Naming Conventions for Test Methods
+dotnet_naming_rule.test_methods_should_have_underscores.severity = suggestion
+dotnet_naming_rule.test_methods_should_have_underscores.symbols = test_methods
+dotnet_naming_rule.test_methods_should_have_underscores.style = test_method_underscores
+
+dotnet_naming_symbols.test_methods.applicable_kinds = method
+dotnet_naming_symbols.test_methods.applicable_accessibilities = public
+
+dotnet_naming_style.test_method_underscores.capitalization = all_lower
+dotnet_naming_style.test_method_underscores.word_separator = _
+
+# Allow internal access for test projects
+dotnet_diagnostic.CS0618.severity = none # Allow obsolete usage for testing scenarios
+
+# Async Test Methods
+dotnet_diagnostic.VSTHRD200.severity = none # Do not enforce async naming convention
+
+# Nullable Reference Types
+dotnet_diagnostic.CS8618.severity = none # Do not require initialization in test models
+dotnet_diagnostic.CS8625.severity = none # Allow null conversions in test scenarios
+
+# Test Project Specific Rules
+dotnet_diagnostic.CA1707.severity = none # Allow underscores in test names
+dotnet_diagnostic.CA1806.severity = none # Allow unused return values for asserts
+dotnet_diagnostic.CA1506.severity = none # Allow complex test methods
+dotnet_diagnostic.CA1822.severity = none # Do not require methods to be static in tests
+
+# Documentation
+dotnet_diagnostic.CA1515.severity = none # No XML comments required for test methods
+dotnet_diagnostic.CA1200.severity = none # Allow unnecessary namespaces in test projects
+
+# Formatting Rules
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_new_line_before_open_brace = all
+csharp_preserve_single_line_blocks = false
+
+# File Structure Rules
+dotnet_sort_system_directives_first = true

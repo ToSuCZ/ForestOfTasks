@@ -15,6 +15,8 @@ public class ValidationBehavior<TRequest, TResponse>(
       RequestHandlerDelegate<TResponse> next,
       CancellationToken cancellationToken)
   {
+    ArgumentNullException.ThrowIfNull(next);
+    
     if (!validators.Any())
     {
       return await next();

@@ -21,8 +21,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddEnvironmentVariables();
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
 
-builder.Services.AddControllers();
-
 builder.Services.BindApiConfiguration(builder.Configuration);
 builder.Services.AddAuthorization();
 builder.Services.AddApiAuthentication(builder.Configuration, logger);
@@ -38,6 +36,7 @@ builder.Services
   .AddDomain(builder.Configuration, logger)
   .AddInfrastructure(builder.Configuration, logger);
 
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -47,8 +46,6 @@ if (app.Environment.IsDevelopment())
 {
   app.MapOpenApi();
 }
-
-app.MapControllers();
 
 app.UseExceptionHandler(error =>
 {
@@ -73,6 +70,8 @@ app.UseAuthentication()
   .UseAuthorization();
 
 app.MapHealthChecks("/api/health");
+
+app.MapControllers();
 
 logger.Information("[Init] Application starting");
 

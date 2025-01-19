@@ -1,4 +1,5 @@
 using FluentResults;
+using ForestOfTasks.Application.Users.Contracts;
 using ForestOfTasks.Domain.Aggregates.UserAggregate;
 using ForestOfTasks.SharedKernel;
 using Microsoft.AspNetCore.Identity;
@@ -7,9 +8,9 @@ namespace ForestOfTasks.Application.Users.Commands.CreateUser;
 
 internal sealed class CreateUserCommandHandler(
   UserManager<ApplicationUser> userManager
-) : ICommandHandler<CreateUserCommand, Result<ApplicationUser>>
+) : ICommandHandler<CreateUserCommand, Result<UserDto>>
 {
-  public async Task<Result<ApplicationUser>> Handle(
+  public async Task<Result<UserDto>> Handle(
     CreateUserCommand request,
     CancellationToken cancellationToken)
   {
@@ -19,7 +20,7 @@ internal sealed class CreateUserCommandHandler(
     
     if (result.Succeeded)
     {
-      return Result.Ok(newUser);
+      return Result.Ok(UserDto.FromUser(newUser));
     }
 
     return Result

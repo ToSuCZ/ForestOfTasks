@@ -1,4 +1,4 @@
-@host = http://localhost:5000
+@host = https://localhost:5001
 
 ### Register Request
 
@@ -19,8 +19,13 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "Carl Von Bahnhoff",
-  "password": "Test1234!"
+  "email": "carl@bahnhoff.de",
+  "password": "Testinek1234!"
 }
+
+### Get User by Id
+
+GET {{host}}/api/users/48138495-bef4-4550-93ea-7ca00bd95fa4
+Accept: application/json
 
 ###

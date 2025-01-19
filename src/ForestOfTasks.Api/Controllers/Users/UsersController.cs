@@ -7,11 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ForestOfTasks.Api.Controllers.Users;
 
-[Route("api/[controller]/[action]")]
-internal class UsersController(ISender mediator) : ApiControllerBase
+[Route("api/[controller]")]
+[ApiController]
+public class UsersController(ISender mediator) : ControllerBase
 {
-  [HttpPost]
-  public async Task<IActionResult> RegisterAsync(RegisterRequest request)
+  [HttpPost("[action]")]
+  public async Task<IActionResult> Register(RegisterRequest request)
   {
     var result = await mediator.Send(
       new CreateUserCommand(request.Email, request.Username, request.Password));
@@ -21,28 +22,27 @@ internal class UsersController(ISender mediator) : ApiControllerBase
       return BadRequest(result.Errors);
     }
     
-    return Ok($"Registered as: {result.Value.UserName} with1 {result.Value.Email}");
+    return Ok(result.Value);
   }
   
-  [HttpPost]
-  public async Task<IActionResult> LoginAsync(LoginRequest request)
+  [HttpPost("[action]")]
+  public async Task<IActionResult> Login(LoginRequest request)
   {
     var result = await mediator.Send(
       new LoginUserQuery(request.Email, request.Password));
     
     if (!result.IsSuccess)
     {
-      return Unauthorized();
+      return Unauthorized(result.Errors);
     }
     
-    return Ok($"Token: {result.Value}");
+    return Ok(result.Value);
   }
   
-  [HttpGet]
-  public async Task<IActionResult> DetailAsync(UserDetailRequest request)
+  [HttpGet("{id:guid}")]
+  public async Task<IActionResult> Detail(Guid id)
   {
-    var result = await mediator.Send(
-      new UserDetailQuery(request.UserId));
+    var result = await mediator.Send(new UserDetailQuery(id));
 
     if (!result.IsSuccess)
     {

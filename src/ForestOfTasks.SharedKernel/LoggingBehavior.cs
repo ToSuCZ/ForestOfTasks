@@ -25,7 +25,9 @@ public class LoggingBehavior<TRequest, TResponse>(
     TRequest request,
     RequestHandlerDelegate<TResponse> next,
     CancellationToken cancellationToken)
-  {
+  { 
+    ArgumentNullException.ThrowIfNull(next);
+    
     _logStart(logger, typeof(TRequest).Name, null);
     var sw = Stopwatch.StartNew();
     

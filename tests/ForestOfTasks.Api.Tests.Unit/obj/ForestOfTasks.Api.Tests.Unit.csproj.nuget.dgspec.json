@@ -4,14 +4,529 @@
     "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/ForestOfTasks.Api.Tests.Unit.csproj": {}
   },
   "projects": {
-    "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/ForestOfTasks.Api.Tests.Unit.csproj": {
+    "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Api/ForestOfTasks.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/ForestOfTasks.Api.Tests.Unit.csproj",
-        "projectName": "ForestOfTasks.Api.Tests.Unit",
-        "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/ForestOfTasks.Api.Tests.Unit.csproj",
+        "projectUniqueName": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Api/ForestOfTasks.Api.csproj",
+        "projectName": "ForestOfTasks.Api",
+        "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Api/ForestOfTasks.Api.csproj",
         "packagesPath": "/home/tvacula/.nuget/packages/",
-        "outputPath": "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/obj/",
+        "outputPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Api/obj/",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "/home/tvacula/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Application/ForestOfTasks.Application.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Application/ForestOfTasks.Application.csproj"
+              },
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj"
+              },
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Infrastructure/ForestOfTasks.Infrastructure.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Infrastructure/ForestOfTasks.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.16.0, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )",
+              "versionCentrallyManaged": true
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.5.0.109200, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "Ardalis.GuardClauses": "5.0.0",
+            "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "MediatR": "12.4.1",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "9.0.0",
+            "Microsoft.EntityFrameworkCore": "9.0.0",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.0",
+            "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
+            "Microsoft.NET.Test.Sdk": "17.11.1",
+            "NSubstitute": "5.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Shouldly": "4.2.1",
+            "SonarAnalyzer.CSharp": "10.5.0.109200",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Application/ForestOfTasks.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Application/ForestOfTasks.Application.csproj",
+        "projectName": "ForestOfTasks.Application",
+        "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Application/ForestOfTasks.Application.csproj",
+        "packagesPath": "/home/tvacula/.nuget/packages/",
+        "outputPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Application/obj/",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "/home/tvacula/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj"
+              },
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.16.0, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.3.1, )",
+              "versionCentrallyManaged": true
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.5.0.109200, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "Ardalis.GuardClauses": "5.0.0",
+            "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "MediatR": "12.4.1",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "9.0.0",
+            "Microsoft.EntityFrameworkCore": "9.0.0",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.0",
+            "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
+            "Microsoft.NET.Test.Sdk": "17.11.1",
+            "NSubstitute": "5.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Shouldly": "4.2.1",
+            "SonarAnalyzer.CSharp": "10.5.0.109200",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj",
+        "projectName": "ForestOfTasks.Domain",
+        "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj",
+        "packagesPath": "/home/tvacula/.nuget/packages/",
+        "outputPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "/home/tvacula/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.5.0.109200, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "Ardalis.GuardClauses": "5.0.0",
+            "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "MediatR": "12.4.1",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "9.0.0",
+            "Microsoft.EntityFrameworkCore": "9.0.0",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.0",
+            "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
+            "Microsoft.NET.Test.Sdk": "17.11.1",
+            "NSubstitute": "5.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Shouldly": "4.2.1",
+            "SonarAnalyzer.CSharp": "10.5.0.109200",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Infrastructure/ForestOfTasks.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Infrastructure/ForestOfTasks.Infrastructure.csproj",
+        "projectName": "ForestOfTasks.Infrastructure",
+        "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Infrastructure/ForestOfTasks.Infrastructure.csproj",
+        "packagesPath": "/home/tvacula/.nuget/packages/",
+        "outputPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "/home/tvacula/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Domain/ForestOfTasks.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.5.0.109200, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "Ardalis.GuardClauses": "5.0.0",
+            "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "MediatR": "12.4.1",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "9.0.0",
+            "Microsoft.EntityFrameworkCore": "9.0.0",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.0",
+            "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
+            "Microsoft.NET.Test.Sdk": "17.11.1",
+            "NSubstitute": "5.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Shouldly": "4.2.1",
+            "SonarAnalyzer.CSharp": "10.5.0.109200",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj",
+        "projectName": "ForestOfTasks.SharedKernel",
+        "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/ForestOfTasks.SharedKernel.csproj",
+        "packagesPath": "/home/tvacula/.nuget/packages/",
+        "outputPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.SharedKernel/obj/",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
@@ -47,9 +562,147 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[5.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.16.0, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )",
+              "versionCentrallyManaged": true
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.5.0.109200, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "Ardalis.GuardClauses": "5.0.0",
+            "coverlet.collector": "6.0.2",
+            "FluentResults": "3.16.0",
+            "FluentValidation.AspNetCore": "11.3.0",
+            "MediatR": "12.4.1",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+            "Microsoft.AspNetCore.Identity": "2.3.0",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "9.0.0",
+            "Microsoft.EntityFrameworkCore": "9.0.0",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.0",
+            "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
+            "Microsoft.NET.Test.Sdk": "17.11.1",
+            "NSubstitute": "5.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Shouldly": "4.2.1",
+            "SonarAnalyzer.CSharp": "10.5.0.109200",
+            "xunit": "2.9.2",
+            "xunit.runner.visualstudio": "2.8.2"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/ForestOfTasks.Api.Tests.Unit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/ForestOfTasks.Api.Tests.Unit.csproj",
+        "projectName": "ForestOfTasks.Api.Tests.Unit",
+        "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/ForestOfTasks.Api.Tests.Unit.csproj",
+        "packagesPath": "/home/tvacula/.nuget/packages/",
+        "outputPath": "/home/tvacula/work/stuff/ForestOfTasks/tests/ForestOfTasks.Api.Tests.Unit/obj/",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "/home/tvacula/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Api/ForestOfTasks.Api.csproj": {
+                "projectPath": "/home/tvacula/work/stuff/ForestOfTasks/src/ForestOfTasks.Api/ForestOfTasks.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )",
+              "versionCentrallyManaged": true
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.11.1, )",
+              "versionCentrallyManaged": true
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[5.3.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Shouldly": {
+              "target": "Package",
+              "version": "[4.2.1, )",
               "versionCentrallyManaged": true
             },
             "SonarAnalyzer.CSharp": {
@@ -91,7 +744,9 @@
             "Microsoft.Extensions.Logging": "9.0.0",
             "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
+            "NSubstitute": "5.3.0",
             "Serilog.AspNetCore": "9.0.0",
+            "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
             "xunit": "2.9.2",
             "xunit.runner.visualstudio": "2.8.2"

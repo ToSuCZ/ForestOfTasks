@@ -14,8 +14,7 @@ namespace ForestOfTasks.Application.Users.Queries.LoginUser;
 
 internal sealed class LoginUserQueryHandler(
     UserManager<ApplicationUser> userManager,
-    IConfiguration configuration,
-    JsonWebTokenHandler tokenHandler
+    IConfiguration configuration
 ) : IRequestHandler<LoginUserQuery, Result<string>>
 {
   public async Task<Result<string>> Handle(
@@ -56,6 +55,8 @@ internal sealed class LoginUserQueryHandler(
             new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings!.JwtSecret)),
             SecurityAlgorithms.HmacSha256)
     };
+    
+    var tokenHandler = new JsonWebTokenHandler();
     
     return Result.Ok(tokenHandler.CreateToken(token));
   }
