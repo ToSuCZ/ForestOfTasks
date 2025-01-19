@@ -1,4 +1,4 @@
-using FluentResults;
+﻿using FluentResults;
 using ForestOfTasks.Api.Contracts.Users;
 using ForestOfTasks.Api.Controllers.Users;
 using ForestOfTasks.Application.Users.Commands.CreateUser;
@@ -22,7 +22,7 @@ public class UsersControllerTests
         _mediator = Substitute.For<ISender>();
         _sut = new UsersController(_mediator);
     }
-    
+
     [Fact]
     public async Task Register_ShouldReturnOk_WhenUserIsCreated()
     {
@@ -30,14 +30,14 @@ public class UsersControllerTests
         var request = new RegisterRequest("username", "email@email.com", "password");
         var userGuid = Guid.NewGuid();
         var userDto = new UserDto(userGuid, "username", "email");
-        
+
         _mediator
             .Send(Arg.Any<CreateUserCommand>(), Arg.Any<CancellationToken>())
             .Returns(Result.Ok(userDto));
-        
+
         // Act
         var response = await _sut.Register(request);
-        
+
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(response);
         okResult.Value.ShouldBe(userDto);
@@ -49,14 +49,14 @@ public class UsersControllerTests
         // Arrange
         var request = new RegisterRequest("username", "email@email.com", "password");
         var errors = new[] { new Error("Invalid password") };
-        
+
         _mediator
             .Send(Arg.Any<CreateUserCommand>(), Arg.Any<CancellationToken>())
             .Returns(Result.Fail(errors));
-        
+
         // Act
         var response = await _sut.Register(request);
-        
+
         // Assert
         var badRequestResult = Assert.IsType<BadRequestObjectResult>(response);
         badRequestResult.Value.ShouldBe(errors);
@@ -105,33 +105,33 @@ public class UsersControllerTests
         // Arrange
         var userId = Guid.NewGuid();
         var userDetail = new UserDto(userId, "username", "email");
-        
+
         _mediator
             .Send(Arg.Any<UserDetailQuery>(), Arg.Any<CancellationToken>())
             .Returns(Result.Ok(userDetail));
-        
+
         // Act
         var response = await _sut.Detail(userId);
-        
+
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(response);
         okResult.Value.ShouldBe(userDetail);
     }
-    
+
     [Fact]
     public async Task Detail_ShouldReturnNotFound_WhenUserDoesNotExist()
     {
         // Arrange
         var userId = Guid.NewGuid();
         var errors = new[] { new Error("User not found") };
-        
+
         _mediator
             .Send(Arg.Any<UserDetailQuery>(), Arg.Any<CancellationToken>())
             .Returns(Result.Fail(errors));
-        
+
         // Act
         var response = await _sut.Detail(userId);
-        
+
         // Assert
         Assert.IsType<NotFoundResult>(response);
     }

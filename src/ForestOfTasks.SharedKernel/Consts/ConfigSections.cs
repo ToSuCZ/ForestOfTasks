@@ -1,6 +1,6 @@
-namespace ForestOfTasks.SharedKernel.Consts;
+﻿namespace ForestOfTasks.SharedKernel.Consts;
 
 public static class ConfigSections
 {
-  public static readonly string Auth = "Auth";
+    public static readonly string Auth = "Auth";
 }

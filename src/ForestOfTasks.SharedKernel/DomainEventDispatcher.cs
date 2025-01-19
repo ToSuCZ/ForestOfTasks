@@ -1,4 +1,4 @@
-using Ardalis.GuardClauses;
+﻿using Ardalis.GuardClauses;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
@@ -9,32 +9,32 @@ public class DomainEventDispatcher(
   IPublisher mediator
 ) : IDomainEventDispatcher
 {
-  private static readonly Action<ILogger, string, int, Exception?> _logDispatchingEvent =
-    LoggerMessage.Define<string, int>(
-      LogLevel.Information,
-      new EventId(1, nameof(DispatchAndClearAsync)),
-      "Dispatching domain events for entity {Entity}. Count: {Count}");
-  
-  public async Task DispatchAndClearAsync(IEnumerable<IDomainEventHolder> entities, CancellationToken cancellationToken = default)
-  {
-    Guard.Against.Null(entities);
-    
-    foreach (IDomainEventHolder entity in entities)
+    private static readonly Action<ILogger, string, int, Exception?> _logDispatchingEvent =
+      LoggerMessage.Define<string, int>(
+        LogLevel.Information,
+        new EventId(1, nameof(DispatchAndClearAsync)),
+        "Dispatching domain events for entity {Entity}. Count: {Count}");
+
+    public async Task DispatchAndClearAsync(IEnumerable<IDomainEventHolder> entities, CancellationToken cancellationToken = default)
     {
-        DomainEventBase[] domainEvents = entity.DomainEvents.ToArray();
-        
-        _logDispatchingEvent(
-          logger,
-          entity.GetType().Name,
-          domainEvents.Length,
-          null);
+        Guard.Against.Null(entities);
 
-        entity.ClearDomainEvents();
-
-        foreach (DomainEventBase domainEvent in domainEvents)
+        foreach (IDomainEventHolder entity in entities)
         {
-          await mediator.Publish(domainEvent, cancellationToken);
+            DomainEventBase[] domainEvents = entity.DomainEvents.ToArray();
+
+            _logDispatchingEvent(
+              logger,
+              entity.GetType().Name,
+              domainEvents.Length,
+              null);
+
+            entity.ClearDomainEvents();
+
+            foreach (DomainEventBase domainEvent in domainEvents)
+            {
+                await mediator.Publish(domainEvent, cancellationToken);
+            }
         }
     }
-  }
 }

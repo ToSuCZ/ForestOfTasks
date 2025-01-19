@@ -1,4 +1,4 @@
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace ForestOfTasks.Application.Users.Queries.UserDetail;
 

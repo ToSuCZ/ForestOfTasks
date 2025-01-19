@@ -27,5 +27,9 @@
   <ItemGroup>
     <Folder Include="Configuration\" />
   </ItemGroup>
+    
+  <PropertyGroup>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+  </PropertyGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-namespace ForestOfTasks.SharedKernel;
+﻿namespace ForestOfTasks.SharedKernel;
 
 public interface IAggregateRoot
 {
-  
+
 }

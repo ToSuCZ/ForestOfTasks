@@ -1,4 +1,4 @@
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Text;
 using FluentResults;
 using ForestOfTasks.Application.Configuration;
@@ -17,47 +17,48 @@ internal sealed class LoginUserQueryHandler(
     IConfiguration configuration
 ) : IRequestHandler<LoginUserQuery, Result<string>>
 {
-  public async Task<Result<string>> Handle(
-      LoginUserQuery request,
-      CancellationToken cancellationToken)
-  {
-    var user = await userManager.FindByEmailAsync(request.Email);
-    
-    if (user is null)
+    public async Task<Result<string>> Handle(
+        LoginUserQuery request,
+        CancellationToken cancellationToken)
     {
-      return Result.Fail("User not found");
-    }
-    
-    var loginSuccess = await userManager.CheckPasswordAsync(user, request.Password);
-    
-    if (!loginSuccess)
-    {
-      return Result.Fail("Invalid password");
-    }
-    
-    // create JWT Token
-    var settings = configuration.GetSection(ConfigSections.Auth).Get<JwtSettings>();
+        var user = await userManager.FindByEmailAsync(request.Email);
 
-    var claims = new[]
-    {
+        if (user is null)
+        {
+            return Result.Fail("User not found");
+        }
+
+        var loginSuccess = await userManager.CheckPasswordAsync(user, request.Password);
+
+        if (!loginSuccess)
+        {
+            return Result.Fail("Invalid password");
+        }
+
+        // create JWT Token
+        var settings = configuration.GetSection(ConfigSections.Auth).Get<JwtSettings>();
+
+        var claims = new[]
+        {
         new Claim(JwtRegisteredClaimNames.Sub, user.Id),
         new Claim(JwtRegisteredClaimNames.Email, user.Email!),
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
     };
-    
-    var token = new SecurityTokenDescriptor{
-        
-        Issuer = settings!.JwtIssuer,
-        Audience = settings.JwtAudience,
-        Subject = new ClaimsIdentity(claims),
-        Expires = DateTime.UtcNow.AddMinutes(settings.JwtDurationInMinutes),
-        SigningCredentials = new SigningCredentials(
-            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings!.JwtSecret)),
-            SecurityAlgorithms.HmacSha256)
-    };
-    
-    var tokenHandler = new JsonWebTokenHandler();
-    
-    return Result.Ok(tokenHandler.CreateToken(token));
-  }
+
+        var token = new SecurityTokenDescriptor
+        {
+
+            Issuer = settings!.JwtIssuer,
+            Audience = settings.JwtAudience,
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.UtcNow.AddMinutes(settings.JwtDurationInMinutes),
+            SigningCredentials = new SigningCredentials(
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings!.JwtSecret)),
+                SecurityAlgorithms.HmacSha256)
+        };
+
+        var tokenHandler = new JsonWebTokenHandler();
+
+        return Result.Ok(tokenHandler.CreateToken(token));
+    }
 }

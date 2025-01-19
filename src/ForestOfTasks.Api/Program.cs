@@ -34,7 +34,7 @@ logger.Information("[Init] {Layer} layer services registered", LayerStructure.Ap
 builder.Services
   .AddApplication(builder.Configuration, logger)
   .AddDomain(builder.Configuration, logger)
-  .AddInfrastructure(builder.Configuration, logger);
+  .AddInfrastructure(builder.Configuration, logger, builder.Environment);
 
 builder.Services.AddControllers();
 
@@ -44,26 +44,26 @@ app.UseHttpsRedirection();
 
 if (app.Environment.IsDevelopment())
 {
-  app.MapOpenApi();
+    app.MapOpenApi();
 }
 
 app.UseExceptionHandler(error =>
 {
-  error.Run(async ctx =>
-  {
-    var problemDetails = new ProblemDetails
+    error.Run(async ctx =>
     {
-      Title = "An error occurred",
-      Status = StatusCodes.Status500InternalServerError,
-      Detail = ctx.Features.Get<IExceptionHandlerFeature>()?.Error.Message,
-      Instance = ctx.Request.Path
-    };
-    
-    ctx.Response.StatusCode = problemDetails.Status.Value;
-    ctx.Response.ContentType = "application/problem+json";
-    
-    await ctx.Response.WriteAsJsonAsync(problemDetails);
-  });
+        var problemDetails = new ProblemDetails
+        {
+            Title = "An error occurred",
+            Status = StatusCodes.Status500InternalServerError,
+            Detail = ctx.Features.Get<IExceptionHandlerFeature>()?.Error.Message,
+            Instance = ctx.Request.Path
+        };
+
+        ctx.Response.StatusCode = problemDetails.Status.Value;
+        ctx.Response.ContentType = "application/problem+json";
+
+        await ctx.Response.WriteAsJsonAsync(problemDetails);
+    });
 });
 
 app.UseAuthentication()
@@ -76,3 +76,7 @@ app.MapControllers();
 logger.Information("[Init] Application starting");
 
 await app.RunAsync();
+
+#pragma warning disable S1118
+public partial class Program;
+#pragma warning restore S1118
