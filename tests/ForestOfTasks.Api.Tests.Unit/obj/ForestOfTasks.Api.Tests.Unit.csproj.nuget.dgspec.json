@@ -105,6 +105,11 @@
               "target": "Package",
               "version": "[10.5.0.109200, )",
               "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.0, )",
+              "versionCentrallyManaged": true
             }
           },
           "centralPackageVersions": {
@@ -129,6 +134,7 @@
             "Serilog.AspNetCore": "9.0.0",
             "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
+            "Swashbuckle.AspNetCore": "7.2.0",
             "WireMock.Net": "1.6.11",
             "xunit": "2.9.2",
             "xunit.runner.visualstudio": "2.8.2"

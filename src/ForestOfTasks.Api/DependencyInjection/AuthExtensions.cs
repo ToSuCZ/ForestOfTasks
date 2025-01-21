@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using System.Text.Json;
 using ForestOfTasks.Application.Configuration;
 using ForestOfTasks.SharedKernel.Consts;
@@ -8,16 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace ForestOfTasks.Api.DependencyInjection;
 
-internal static class ServiceCollectionExtensions
+public static class AuthExtensions
 {
-    public static IServiceCollection BindApiConfiguration(
-      this IServiceCollection services,
-      ConfigurationManager configuration)
-    {
-        services.Configure<JwtSettings>(configuration.GetSection(ConfigSections.Auth));
-        return services;
-    }
-
     public static IServiceCollection AddApiAuthentication(
       this IServiceCollection services,
       ConfigurationManager configuration,

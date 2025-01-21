@@ -29,6 +29,7 @@ builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly, includeInte
 builder.Services.AddHealthChecks();
 
 builder.Services.AddOpenApi();
+builder.Services.AddSwaggerCustomization();
 logger.Information("[Init] {Layer} layer services registered", LayerStructure.Api);
 
 builder.Services
@@ -46,6 +47,9 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseExceptionHandler(error =>
 {

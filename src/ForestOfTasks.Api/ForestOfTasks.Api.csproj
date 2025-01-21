@@ -16,16 +16,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ForestOfTasks.Application\ForestOfTasks.Application.csproj" />
     <ProjectReference Include="..\ForestOfTasks.Domain\ForestOfTasks.Domain.csproj" />
     <ProjectReference Include="..\ForestOfTasks.Infrastructure\ForestOfTasks.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Configuration\" />
   </ItemGroup>
     
   <PropertyGroup>
