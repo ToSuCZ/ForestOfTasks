@@ -133,6 +133,7 @@ public class UsersControllerTests
         var response = await _sut.Detail(userId);
 
         // Assert
-        Assert.IsType<NotFoundResult>(response);
+        var notFoundResult = Assert.IsType<NotFoundObjectResult>(response);
+        notFoundResult.Value.ShouldBe(errors);
     }
 }

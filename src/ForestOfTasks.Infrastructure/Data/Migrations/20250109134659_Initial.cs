@@ -12,11 +12,11 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
-                name: "ForestOfTasks");
+                name: "ForestOfTasks.ServiceDefaults");
 
             migrationBuilder.CreateTable(
                 name: "Users",
-                schema: "ForestOfTasks",
+                schema: "ForestOfTasks.ServiceDefaults",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -46,7 +46,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Users",
-                schema: "ForestOfTasks");
+                schema: "ForestOfTasks.ServiceDefaults");
         }
     }
 }

@@ -20,7 +20,7 @@ public static class ServiceCollectionExtensions
       ILogger logger,
       IHostEnvironment environment)
     {
-        string? connectionString = configuration.GetConnectionString(ConnectionStrings.ApplicationDatabase);
+        string? connectionString = configuration.GetConnectionString(ConnectionStrings.AspireDatabase);
 
         if (environment.IsEnvironment("Testing"))
         {

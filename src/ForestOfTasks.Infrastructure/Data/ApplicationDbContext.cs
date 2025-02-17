@@ -14,7 +14,7 @@ public class ApplicationDbContext(
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.HasDefaultSchema("ForestOfTasks");
+        builder.HasDefaultSchema("ForestOfTasks.ServiceDefaults");
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
         base.OnModelCreating(builder);

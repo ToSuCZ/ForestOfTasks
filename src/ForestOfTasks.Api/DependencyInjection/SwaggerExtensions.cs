@@ -14,9 +14,9 @@ public static class SwaggerExtensions
                 version,
                 new OpenApiInfo
                 {
-                    Title = "ForestOfTasks.Api",
+                    Title = "ForestOfTasks.ServiceDefaults.Api",
                     Version = version,
-                    Description = "Api of the ForestOfTasks project",
+                    Description = "Api of the ForestOfTasks.ServiceDefaults project",
                     Contact = new OpenApiContact { Name = "Tomas Vacula", Email = "tomas.vacula@protonmail.com" }
                 });
 

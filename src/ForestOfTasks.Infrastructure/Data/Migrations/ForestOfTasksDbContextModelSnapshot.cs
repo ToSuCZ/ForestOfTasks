@@ -17,7 +17,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("ForestOfTasks")
+                .HasDefaultSchema("ForestOfTasks.ServiceDefaults")
                 .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
@@ -47,7 +47,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles", "ForestOfTasks");
+                    b.ToTable("AspNetRoles", "ForestOfTasks.ServiceDefaults");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -72,7 +72,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims", "ForestOfTasks");
+                    b.ToTable("AspNetRoleClaims", "ForestOfTasks.ServiceDefaults");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
@@ -137,7 +137,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("AspNetUsers", "ForestOfTasks");
+                    b.ToTable("AspNetUsers", "ForestOfTasks.ServiceDefaults");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -162,7 +162,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims", "ForestOfTasks");
+                    b.ToTable("AspNetUserClaims", "ForestOfTasks.ServiceDefaults");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
@@ -184,7 +184,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins", "ForestOfTasks");
+                    b.ToTable("AspNetUserLogins", "ForestOfTasks.ServiceDefaults");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
@@ -199,7 +199,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles", "ForestOfTasks");
+                    b.ToTable("AspNetUserRoles", "ForestOfTasks.ServiceDefaults");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -218,7 +218,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens", "ForestOfTasks");
+                    b.ToTable("AspNetUserTokens", "ForestOfTasks.ServiceDefaults");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

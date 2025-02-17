@@ -20,13 +20,13 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("ForestOfTasks")
+                .HasDefaultSchema("ForestOfTasks.ServiceDefaults")
                 .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ForestOfTasks.Domain.Aggregates.User.User", b =>
+            modelBuilder.Entity("ForestOfTasks.ServiceDefaults.Domain.Aggregates.User.User", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -75,7 +75,7 @@ namespace ForestOfTasks.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users", "ForestOfTasks");
+                    b.ToTable("Users", "ForestOfTasks.ServiceDefaults");
                 });
 #pragma warning restore 612, 618
         }

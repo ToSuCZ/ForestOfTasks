@@ -46,7 +46,7 @@ public class UsersController(ISender mediator) : ControllerBase
 
         if (!result.IsSuccess)
         {
-            return NotFound();
+            return NotFound(result.Errors);
         }
 
         return Ok(result.Value);

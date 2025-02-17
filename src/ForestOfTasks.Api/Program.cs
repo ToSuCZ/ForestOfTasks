@@ -18,6 +18,8 @@ logger.Information("[Init] Starting web host");
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 builder.Configuration.AddEnvironmentVariables();
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
 
@@ -40,6 +42,8 @@ builder.Services
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 app.UseHttpsRedirection();
 

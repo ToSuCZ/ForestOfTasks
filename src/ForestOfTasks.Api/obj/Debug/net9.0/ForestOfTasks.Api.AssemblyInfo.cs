@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ForestOfTasks.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21289d422284c0a3da771083726d565cf07024aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5e16754c0b6028dd77ba30df8cb48f2b670567a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ForestOfTasks.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ForestOfTasks.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
