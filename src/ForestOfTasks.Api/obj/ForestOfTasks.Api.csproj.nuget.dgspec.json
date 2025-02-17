@@ -49,31 +49,38 @@
           "dependencies": {
             "Microsoft.Extensions.Http.Resilience": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
             },
             "Microsoft.Extensions.ServiceDiscovery": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
             },
             "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
               "target": "Package",
-              "version": "[1.9.0, )"
+              "version": "[1.9.0, )",
+              "versionCentrallyManaged": true
             },
             "OpenTelemetry.Extensions.Hosting": {
               "target": "Package",
-              "version": "[1.9.0, )"
+              "version": "[1.9.0, )",
+              "versionCentrallyManaged": true
             },
             "OpenTelemetry.Instrumentation.AspNetCore": {
               "target": "Package",
-              "version": "[1.9.0, )"
+              "version": "[1.9.0, )",
+              "versionCentrallyManaged": true
             },
             "OpenTelemetry.Instrumentation.Http": {
               "target": "Package",
-              "version": "[1.9.0, )"
+              "version": "[1.9.0, )",
+              "versionCentrallyManaged": true
             },
             "OpenTelemetry.Instrumentation.Runtime": {
               "target": "Package",
-              "version": "[1.9.0, )"
+              "version": "[1.9.0, )",
+              "versionCentrallyManaged": true
             },
             "SonarAnalyzer.CSharp": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
@@ -85,6 +92,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Aspire.Hosting.AppHost": "9.0.0",
             "Aspire.Hosting.NodeJs": "9.0.0",
             "Aspire.Hosting.SqlServer": "9.0.0",
             "coverlet.collector": "6.0.2",
@@ -100,10 +108,17 @@
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Http.Resilience": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.Extensions.ServiceDiscovery": "9.0.0",
             "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "NSubstitute": "5.3.0",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
+            "OpenTelemetry.Extensions.Hosting": "1.9.0",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
+            "OpenTelemetry.Instrumentation.Http": "1.9.0",
+            "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
             "Serilog.AspNetCore": "9.0.0",
             "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -248,6 +263,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Aspire.Hosting.AppHost": "9.0.0",
             "Aspire.Hosting.NodeJs": "9.0.0",
             "Aspire.Hosting.SqlServer": "9.0.0",
             "coverlet.collector": "6.0.2",
@@ -263,10 +279,17 @@
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Http.Resilience": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.Extensions.ServiceDiscovery": "9.0.0",
             "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "NSubstitute": "5.3.0",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
+            "OpenTelemetry.Extensions.Hosting": "1.9.0",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
+            "OpenTelemetry.Instrumentation.Http": "1.9.0",
+            "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
             "Serilog.AspNetCore": "9.0.0",
             "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -383,6 +406,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Aspire.Hosting.AppHost": "9.0.0",
             "Aspire.Hosting.NodeJs": "9.0.0",
             "Aspire.Hosting.SqlServer": "9.0.0",
             "coverlet.collector": "6.0.2",
@@ -398,10 +422,17 @@
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Http.Resilience": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.Extensions.ServiceDiscovery": "9.0.0",
             "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "NSubstitute": "5.3.0",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
+            "OpenTelemetry.Extensions.Hosting": "1.9.0",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
+            "OpenTelemetry.Instrumentation.Http": "1.9.0",
+            "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
             "Serilog.AspNetCore": "9.0.0",
             "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -500,6 +531,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Aspire.Hosting.AppHost": "9.0.0",
             "Aspire.Hosting.NodeJs": "9.0.0",
             "Aspire.Hosting.SqlServer": "9.0.0",
             "coverlet.collector": "6.0.2",
@@ -515,10 +547,17 @@
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Http.Resilience": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.Extensions.ServiceDiscovery": "9.0.0",
             "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "NSubstitute": "5.3.0",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
+            "OpenTelemetry.Extensions.Hosting": "1.9.0",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
+            "OpenTelemetry.Instrumentation.Http": "1.9.0",
+            "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
             "Serilog.AspNetCore": "9.0.0",
             "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -637,6 +676,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Aspire.Hosting.AppHost": "9.0.0",
             "Aspire.Hosting.NodeJs": "9.0.0",
             "Aspire.Hosting.SqlServer": "9.0.0",
             "coverlet.collector": "6.0.2",
@@ -652,10 +692,17 @@
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Http.Resilience": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.Extensions.ServiceDiscovery": "9.0.0",
             "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "NSubstitute": "5.3.0",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
+            "OpenTelemetry.Extensions.Hosting": "1.9.0",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
+            "OpenTelemetry.Instrumentation.Http": "1.9.0",
+            "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
             "Serilog.AspNetCore": "9.0.0",
             "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",
@@ -765,6 +812,7 @@
           },
           "centralPackageVersions": {
             "Ardalis.GuardClauses": "5.0.0",
+            "Aspire.Hosting.AppHost": "9.0.0",
             "Aspire.Hosting.NodeJs": "9.0.0",
             "Aspire.Hosting.SqlServer": "9.0.0",
             "coverlet.collector": "6.0.2",
@@ -780,10 +828,17 @@
             "Microsoft.EntityFrameworkCore.Design": "9.0.0",
             "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
             "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
+            "Microsoft.Extensions.Http.Resilience": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.Extensions.ServiceDiscovery": "9.0.0",
             "Microsoft.IdentityModel.JsonWebTokens": "8.3.1",
             "Microsoft.NET.Test.Sdk": "17.11.1",
             "NSubstitute": "5.3.0",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.9.0",
+            "OpenTelemetry.Extensions.Hosting": "1.9.0",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.9.0",
+            "OpenTelemetry.Instrumentation.Http": "1.9.0",
+            "OpenTelemetry.Instrumentation.Runtime": "1.9.0",
             "Serilog.AspNetCore": "9.0.0",
             "Shouldly": "4.2.1",
             "SonarAnalyzer.CSharp": "10.5.0.109200",

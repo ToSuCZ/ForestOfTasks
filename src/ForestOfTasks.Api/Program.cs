@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using FluentValidation;
+using ForestOfTasks;
 using ForestOfTasks.Api.DependencyInjection;
 using ForestOfTasks.Application.DependencyInjection;
 using ForestOfTasks.Domain.DependencyInjection;
