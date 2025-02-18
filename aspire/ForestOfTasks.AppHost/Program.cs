@@ -8,13 +8,13 @@ var mssql = builder.AddSqlServer(AppNames.Db)
 var api = builder.AddProject<Projects.ForestOfTasks_Api>(AppNames.Api)
     .WithReference(mssql)
     .WaitFor(mssql)
+    .WithHttpEndpoint(env: "PORT")
     .WithExternalHttpEndpoints();
 
-builder.AddNpmApp(AppNames.Frontend,"../ForestOfTasks.Presentation")
+builder.AddDockerfile(AppNames.Frontend, "../../web", "Dockerfile")
     .WithReference(api)
     .WaitFor(api)
-    .WithExternalHttpEndpoints()
-    .WithEnvironment("BROWSER", "none")
-    .PublishAsDockerFile();
+    .WithHttpEndpoint(env: "PORT", targetPort: 3000)
+    .WithExternalHttpEndpoints();
 
 await builder.Build().RunAsync();

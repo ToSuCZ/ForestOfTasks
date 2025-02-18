@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestOfTasks.ServiceDefaul
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForestOfTasks.Presentation", "ForestOfTasks.Presentation", "{EF6C3C4C-30EE-463E-B57C-B233D68CDCD7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{9CB6DFD0-A071-4E29-9E30-4E3281F54924}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
